@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>CS 598 -- Reliable Software Systems</title>
+    <link rel="icon" href="sysnet_logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="readings.css">
 </head>
@@ -404,7 +405,7 @@
             </tbody>
         </table>
 
-        <h2>Configuration Errors</h2>
+        <h2>Software Misconfigurations</h2>
 
         <table>
             <tbody>
@@ -462,7 +463,7 @@
             </tbody>
         </table>
 
-        <h2>Operation Mistakes</h2>
+        <h2>Kernel Configurations</h2>
 
             <table>
             <tbody>
@@ -471,39 +472,19 @@
                     <td class="date"><a name="3th">Thu<br>1/31</a></td>
                     <td class="papers">
                         <ul>
-                            <li> A. B. Brown and D. A. Patterson,
-                                <a class="paperlink" href="http://roc.cs.berkeley.edu/papers/brown-emailundo-usenix03.pdf" target="_blank">Undo for
-                                  Operators: Building an Undoable E-mail Store</a>,
-                                  In Proceedings of the 2003 USENIX Annual Technical
-                                  Conference (USENIX ATC '03), June 2003.
+                            <li> A. Kurmus, R. Tartler, D. Dorneanu, B. Heinloth,
+                                 V. Rothberg, A. Ruprecht, W. Schröder-Preikschat,
+                                 D. Lohmann, and R. Kapitza,
+                                <a class="paperlink" href="https://www.ibr.cs.tu-bs.de/users/kurmus/papers/kurmus-ndss13.pdf" target="_blank">Attack
+                                  Surface Metrics and Automated Compile-Time OS Kernel Tailoring</a>,
+                                  In Proceedings of the 20th Annual Network and Distributed System Security Symposium (NDSS '13), February 2013.
                                 <p></p>
                             </li>
-                            <li> K. Nagaraja, F. Oliveira, R. Bianchini,
-                                 R. P. Martin, and T. D. Nguyen,
-                                <a class="paperlink" href="https://www.usenix.org/legacy/event/osdi04/tech/full_papers/naragaraja/naragaraja.pdf" target="_blank">Understanding
-                                  and Dealing with Operator Mistakes in Internet
-                                  Services</a>,
-                                  In Proceedings of the 6th Symposium on Operating
-                                  Systems Design and Implementation (OSDI '04),
-                                  December 2004.
+                            <li> R. Tartler, D. Lohmann, J. Sincero, W. Schröder-Preikschat,
+                                <a class="paperlink" href="https://www4.cs.fau.de/Publications/2011/tartler_11_eurosys.pdf" target="_blank">Feature
+                                  Consistency in Compile-Time -- Configurable System Software</a>,
+                                  In Proceedings of the 2011 European Conference on Computer Systems (EuroSys '11), April 2011.
                                   <p></p>
-                            </li>
-                            <li>
-                              <b>Read the postmortem:</b> <a class="paperlink" href="https://aws.amazon.com/message/41926/" target="_blank">Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region</a>, February 2017.
-                              (<a class="paperlink" href="https://news.ycombinator.com/item?id=13775667" target="_blank">discussions on Hacker News</a>)
-                              <p></p>
-                            </li>
-                            <li> (Optional) related papers:
-                                 <p></p>
-                              <ul>
-                                  <li> D. A. Patterson et al.,
-                                    <a class="paperlink" href="http://roc.cs.berkeley.edu/papers/ROC_TR02-1175.pdf" target="_blank">
-                                      Recovery Oriented Computing (ROC): Motivation, Definition, Techniques, and Case Studies</a>,
-                                      Tech Report UCB//CSD-02-1175, University of California Berkeley, March 2002.
-                                      (<a class="paperlink" href="http://roc.cs.berkeley.edu/" target="_blank">the ROC project website</a>)
-                                    <p></p>
-                                  </li>
-                              </ul>
                             </li>
                         </ul>
                     </td>
@@ -559,52 +540,46 @@
             </tbody>
         </table>
 
-        <h2>Resource Issues</h2>
-
+        <h2>JVM and Big Data</h2>
         <table>
             <tbody>
               <tr>
                   <td class="date"><a name="5th">Tue<br>2/14</a></td>
                   <td class="papers">
                       <ul>
-                          <li> L. Fang, K. Nguyen, G. Xu, B. Demsky, and S. Lu,
-                              <a class="paperlink" href="https://people.cs.uchicago.edu/~shanlu/paper/sosp15-itask.pdf" target="_blank">Interruptible
-                                Tasks: Treating Memory Pressure As Interrupts
-                                for Highly Scalable Data-Parallel Programs</a>,
-                                In Proceedings of the 25th ACM Symposium on Operating
-                                Systems Principles (SOSP '15), October 2015.
-                                <p></p>
-                          </li>
-                          <li> M. Ulrich,
-                              <a class="paperlink" href="https://landing.google.com/sre/book/chapters/addressing-cascading-failures.html" target="_blank">Addressing
-                                Cascading Failures</a>,
-                                Site Reliability Engineering: How Google Runs Production Systems,
-                                O'Reilly, April 2016.
-                                <p></p>
-                          </li>
-                          <li> (Optional) addressing cascading failures is closely related to handling overload:
+                        <li> D. Lion, A. Chiu, H. Sun, X. Zhuang, N. Grcevski, and D. Yuan,
+                          <a class="paperlink" href="http://www.eecg.toronto.edu/~yuan/papers/osdi16-hottub.pdf" target="_blank">
+                            Don't Get Caught In the Cold, Warm-up Your JVM: Understand and Eliminate JVM Warm-up Overhead In Data-parallel Systems</a>,
+                            In Proceedings of the 12th USENIX Symposium on Operating Systems Design and Implementation (OSDI '16),
+                            November 2016.
+                          <p></p>
+                        </li>
+                        <li> G. Essertel, R. Tahboub, J. Decker, K. Brown, K. Olukotun, and T. Rompf,
+                          <a class="paperlink" href="https://www.usenix.org/conference/osdi18/presentation/essertel" target="_blank">
+                            Flare: Optimizing Apache Spark with Native Compilation for Scale-Up Architectures and Medium-Size Data</a>,
+                            In Proceedings of the 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI '18),
+                            October 2018.
+                          <p></p>
+                        </li>
+                          <li> (Optional) papers:
                                <p></p>
                             <ul>
-                                <li> A. F. Cuervo,
-                                  <a class="paperlink" href="https://landing.google.com/sre/book/chapters/handling-overload.html" target="_blank">
-                                    Handling Overload</a>,
-                                    Site Reliability Engineering: How Google Runs Production Systems,
-                                    O'Reilly, April 2016.
-                                  <p></p>
-                                </li>
-                            </ul>
-                          </li>
-                          <li> (Optional) papers related to GC:
-                               <p></p>
-                            <ul>
-                                <li> K. Nguyen, L. Fang, G. Xu, B. Demsky, S. Lu,
-                                     S. Alamian, and O. Mutlu,
-                                  <a class="paperlink" href="http://web.cs.ucla.edu/~harryxu/papers/nguyen-osdi16.pdf" target="_blank">
-                                    Yak: A High-Performance Big-Data-Friendly Garbage Collector</a>,
-                                    In Proceedings of the 12th USENIX Symposium on Operating Systems Design and Implementation (OSDI '16),
-                                    November 2016.
-                                  <p></p>
-                                </li>
+                              <li> K. Nguyen, L. Fang, G. Xu, B. Demsky, S. Lu,
+                                   S. Alamian, and O. Mutlu,
+                                <a class="paperlink" href="http://web.cs.ucla.edu/~harryxu/papers/nguyen-osdi16.pdf" target="_blank">
+                                  Yak: A High-Performance Big-Data-Friendly Garbage Collector</a>,
+                                  In Proceedings of the 12th USENIX Symposium on Operating Systems Design and Implementation (OSDI '16),
+                                  November 2016.
+                                <p></p>
+                              </li>
+                              <li> L. Fang, K. Nguyen, G. Xu, B. Demsky, and S. Lu,
+                                  <a class="paperlink" href="https://people.cs.uchicago.edu/~shanlu/paper/sosp15-itask.pdf" target="_blank">Interruptible
+                                    Tasks: Treating Memory Pressure As Interrupts
+                                    for Highly Scalable Data-Parallel Programs</a>,
+                                    In Proceedings of the 25th ACM Symposium on Operating
+                                    Systems Principles (SOSP '15), October 2015.
+                                    <p></p>
+                              </li>
                                 <li> I. Gog, J. Giceva, M. Schwarzkopf, K. Vaswani,
                                      D. Vytiniotis, G. Ramalingan, M. Costa,
                                      D. Murray, S. Hand, and M. Isard,
